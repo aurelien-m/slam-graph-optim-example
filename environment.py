@@ -24,8 +24,11 @@ def default_env(
         for i in range(circle_points)
     ]
 
-    return {
-        "x": [x for x, _ in landmarks],
-        "y": [y for _, y in landmarks],
-        "color": "landmark",
-    }
+    return [
+        {
+            "x": x,
+            "y": y,
+            "color": "landmark",
+        }
+        for x, y in landmarks
+    ]
