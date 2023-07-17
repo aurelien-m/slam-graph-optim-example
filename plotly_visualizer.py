@@ -9,8 +9,8 @@ class Visualizer:
         robot_positions = []
         annotations = []
 
-        for position in robot.as_list():
-            theta = position["theta"]
+        for position in robot.positions:
+            theta = position["theta_rad"]
             x = position["x"]
             y = position["y"]
             x_arrow_end = x + 0.5 * math.cos(theta)

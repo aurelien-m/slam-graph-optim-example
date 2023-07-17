@@ -2,9 +2,20 @@ from environment import default_env
 from plotly_visualizer import Visualizer
 from robot import Robot
 
+robot_trajectory = [
+    {"x": 13, "y": 5, "theta": 315},
+    {"x": 9, "y": 3, "theta": 270},
+    {"x": 5, "y": 5, "theta": 225},
+    {"x": 5, "y": 9, "theta": 135},
+    {"x": 9, "y": 11, "theta": 90},
+    {"x": 13, "y": 9, "theta": 45},
+]
+
 if __name__ == "__main__":
     env = default_env()
-    robot = Robot(x=13, y=5, theta=90)
+
+    robot = Robot()
+    robot.update_positions(robot_trajectory)
 
     vis = Visualizer(env, robot)
     vis.show()
