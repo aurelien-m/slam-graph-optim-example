@@ -15,7 +15,7 @@ robot_trajectory = [
 if __name__ == "__main__":
     env = default_env()
 
-    robot = Robot()
+    robot = Robot(env)
     robot.add_trajectory(robot_trajectory)
 
     vis = Visualizer(env, robot)
